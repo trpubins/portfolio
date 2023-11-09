@@ -16,6 +16,7 @@
         "alias": {
           "@common": "./src/common",
           "@hooks": "./src/hooks",
+          "@layouts": "./src/layouts",
           "@lib": "./src/lib",
           "@styles": "./src/styles",
           "@themes": "./src/themes",
