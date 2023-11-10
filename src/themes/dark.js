@@ -3,8 +3,8 @@ import common from './common';
 const lightTheme = {
   ...common,
   bg: {
-    default: '#120e26',
-    defaultLight: '#1a1336',
+    default: '#161922',
+    defaultLight: '#242A38',
     reverse: '#F4F4F4',
   },
   text: {
