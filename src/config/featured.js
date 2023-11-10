@@ -2,7 +2,7 @@
 module.exports = [
   {
     title: 'Project #1',
-    cover: '/proj01.png',
+    cover: '/proj01.jpeg',
     github: 'https://github.com/my-user/proj01',
     external: 'https://proj01.my-domain.com',
     descriptionHtml:
@@ -11,7 +11,7 @@ module.exports = [
   },
   {
     title: 'Project #2',
-    cover: '/proj02.png',
+    cover: '/proj02.jpeg',
     github: 'https://github.com/my-user/proj02',
     external: 'https://proj02.my-domain.com',
     descriptionHtml:
@@ -20,7 +20,7 @@ module.exports = [
   },
   {
     title: 'Project #3',
-    cover: '/proj03.png',
+    cover: '/proj03.jpeg',
     github: 'https://github.com/my-user/proj03',
     external: 'https://proj03.my-domain.com',
     descriptionHtml:
