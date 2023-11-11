@@ -48,3 +48,10 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 ## 🚀 Deployment
 
 This project is intended to be deployed as a Single-Page Application (SPA) hosted as a static site. Next.js allows for [static exports](https://nextjs.org/docs/app/building-your-application/deploying/static-exports) using configuration options.
+
+## 🙌 Attributions
+
+This project is adapted from:
+
+- [Brittany Chiang](https://github.com/bchiang7/v4) for original UI
+- [Junior García](https://github.com/jrgarciadev/portfoliov2) for improvements using the Next.js framework
