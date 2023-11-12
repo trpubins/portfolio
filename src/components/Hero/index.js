@@ -13,13 +13,13 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = <h1>Hello, World! My name is</h1>;
-  const two = <StyledBigTitle>First Last.</StyledBigTitle>;
+  const one = <h1>Hello, World! I am</h1>;
+  const two = <StyledBigTitle>Tanner Pubins.</StyledBigTitle>;
   const three = <StyledBigTitle slate>I build excellent software.</StyledBigTitle>;
   const four = (
     <p>
-      I&apos;m a software developer specializing in website development, mobile applications, and
-      everything in between.
+      I&apos;m a software architect specializing in web + mobile application development and cloud
+      computing solutions.
     </p>
   );
   const five = (

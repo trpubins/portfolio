@@ -6,7 +6,7 @@ const BaseLayout = ({ children }) => {
   return (
     <div id="main">
       <Head>
-        <title>First Last | Web Developer</title>
+        <title>Tanner Pubins | SW Architect</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -30,9 +30,9 @@ const BaseLayout = ({ children }) => {
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@my-user" />
-        <meta property="og:site_name" content="First Last | Web Developer" />
+        <meta property="og:site_name" content="Tanner Pubins | SW Architect" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="First Last | Web Developer" />
+        <meta property="og:title" content="Tanner Pubins | SW Architect" />
         <meta property="og:locale" content="en" />
         <meta property="og:url" content="https://my-domain.com" />
         <meta

@@ -42,7 +42,7 @@ export const StyledText = styled.div`
       &:before {
         content: '▹';
         position: absolute;
-        top: 5px;
+        top: 1px;
         left: 0;
         color: ${(props) => props.theme.brand.primary};
         font-size: ${(props) => props.theme.fontSize.sm};

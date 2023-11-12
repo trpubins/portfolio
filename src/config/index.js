@@ -6,7 +6,7 @@ module.exports = {
   email: 'my-email@mail.com',
   featuredProjects,
   projects,
-  skills: ['Python', 'JavaScript', 'React'],
+  skills: ['Python', 'JavaScript', 'React', 'AWS Lambda', 'DynamoDB', 'API Gateway'],
   socialMedia: [
     {
       name: 'GitHub',

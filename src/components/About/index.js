@@ -21,14 +21,22 @@ const About = () => {
       <div className="inner">
         <StyledText>
           <div>
-            <p>Hello! I&apos;m First, a Software Developer based in City, State.</p>
             <p>
-              I enjoy creating beautiful and reliable applications for internet and phones.
+              My name is Tanner, and I&apos;m based in Phoenix, Arizona &nbsp;
+              <span role="img" aria-label="desert">
+                🏜️
+              </span>
+              .
+            </p>
+            <p>
+              I design, develop and deploy software systems that are highly available, scalable and
+              secure.
               <br />
-              My goal is to always build scalable products and performant experiences.
+              My objective is always to architect loosely coupled software so that it can rapidly
+              evolve as clients&apos; needs change.
             </p>
             <br />
-            <p>Here are a few technologies I&apos;ve been working with recently:</p>
+            <p>Here are a few technologies I&apos;m proficient in:</p>
           </div>
 
           <ul className="skills-list">
