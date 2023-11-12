@@ -3,26 +3,18 @@ import featuredProjects from './featured';
 import projects from './projects';
 
 module.exports = {
-  email: 'my-email@mail.com',
+  email: 'tannerp@topshelfsoftware.com',
   featuredProjects,
   projects,
   skills: ['Python', 'JavaScript', 'React', 'AWS Lambda', 'DynamoDB', 'API Gateway'],
   socialMedia: [
     {
       name: 'GitHub',
-      url: 'https://github.com/my-user',
+      url: 'https://github.com/trpubins',
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/my-user/',
-    },
-    {
-      name: 'Instagram',
-      url: 'https://www.instagram.com/my-user',
-    },
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/my-user',
+      url: 'https://www.linkedin.com/in/tpubins/',
     },
   ],
   navLinks: [
