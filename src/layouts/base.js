@@ -29,19 +29,19 @@ const BaseLayout = ({ children }) => {
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@my-user" />
         <meta property="og:site_name" content="Tanner Pubins | SW Architect" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Tanner Pubins | SW Architect" />
         <meta property="og:locale" content="en" />
-        <meta property="og:url" content="https://my-domain.com" />
+        <meta property="og:url" content="https://tannerpubins.com" />
         <meta
           name="description"
-          content="Hello! I'm a Software Developer based in City, State. I develop great web applications."
+          content="Hello, World! I am Tanner Pubins. I build excellent software. I'm a software architect specializing in web + mobile application development and cloud computing solutions."
         />
-        <meta name="keywords" content="Developer, Javascript, Freelancer, React" />
-        <meta property="og:image" content="https://my-domain.com/avatar.jpeg" />
-        <meta property="twitter:image" content="https://my-domain.com/avatar.jpeg" />
+        <meta
+          name="keywords"
+          content="software, architect, developer, aws, amazon web services, cloud, freelancer, python, react"
+        />
       </Head>
       {children}
     </div>
