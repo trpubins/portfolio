@@ -1,16 +1,16 @@
 /* eslint-disable max-len */
 module.exports = [
   {
-    title: 'Project #1',
-    cover: '/proj01.jpeg',
-    github: 'https://github.com/my-user/proj01',
-    external: 'https://proj01.my-domain.com',
+    title: 'Community Ranking Tool',
+    cover: '/proj01.svg',
+    github: 'https://github.com/topshelfsoftware/real-estate-community-ranking-backend',
+    external: 'https://www.movingtophoenix.net/55-communities-ranking-tool',
     descriptionHtml:
-      'Here we provide an executive summary of Project #1. <a target="_blank" rel="noreferrer" href="https://proj01.my-domain.com">Check it out</a> ',
-    techs: ['TechStack01', 'TechStack02', 'TechStack03'],
+      'API-based software solution to rank 55+ communities in the Phoenix metro area based on a homebuyer&apos;s priorities. Takes needs/wants and contact info as input and returns a personalized list of the highest ranked communities.',
+    techs: ['Python', 'JavaScript', 'AWS'],
   },
   {
-    title: 'Project #2',
+    title: 'Pokémon Shiny Hunting',
     cover: '/proj02.jpeg',
     github: 'https://github.com/my-user/proj02',
     external: 'https://proj02.my-domain.com',
@@ -19,7 +19,7 @@ module.exports = [
     techs: ['TechStack01', 'TechStack02', 'TechStack03'],
   },
   {
-    title: 'Project #3',
+    title: 'Gifter App',
     cover: '/proj03.jpeg',
     github: 'https://github.com/my-user/proj03',
     external: 'https://proj03.my-domain.com',
