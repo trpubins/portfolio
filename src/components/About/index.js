@@ -22,18 +22,16 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              My name is Tanner, and I&apos;m based in Phoenix, Arizona &nbsp;
+              My name is Tanner, and I&apos;m based in Phoenix, Arizona. &nbsp;
               <span role="img" aria-label="desert">
                 🏜️
               </span>
-              .
             </p>
+            <br />
             <p>
               I design, develop and deploy software systems that are highly available, scalable and
-              secure.
-              <br />
-              My objective is always to architect loosely coupled software so that it can rapidly
-              evolve as clients&apos; needs change.
+              secure. My objective is always to architect loosely coupled software so that it can
+              rapidly evolve as clients&apos; needs change.
             </p>
             <br />
             <p>Here are a few technologies I&apos;m proficient in:</p>
