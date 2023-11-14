@@ -69,7 +69,7 @@ const Featured = () => {
                 </div>
 
                 <StyledProjectImgWrapper>
-                  <a href={external || github || '#'}>
+                  <a href={external || github || '#'} target="_blank" rel="noopener noreferrer">
                     <div className="img-wrapper">
                       <div className="img-cont" />
                       <StyledProjectImage src={cover} alt={title} className="img" />
