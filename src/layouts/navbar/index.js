@@ -55,9 +55,9 @@ const Nav = ({ isHome }) => {
             <CSSTransition classNames={fadeClass} timeout={timeout}>
               <div className="logo" tabIndex="-1">
                 {isHome ? (
-                  <a href="/" aria-label="home">
+                  <Link href="/" aria-label="home">
                     <IconLogo width={50} height={50} />
-                  </a>
+                  </Link>
                 ) : (
                   <Link href="/" aria-label="home">
                     <IconLogo />

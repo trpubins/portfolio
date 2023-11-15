@@ -1,10 +1,8 @@
 import { useEffect, useState, useRef } from 'react';
 
-const isBrowser = typeof window !== `undefined`;
-
 const useNearScreen = ({ externalRef = null, once = true } = {}) => {
-  if (!isBrowser) return null;
   const [show, setShow] = useState(false);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const element = externalRef !== null && externalRef !== undefined ? externalRef : useRef(null);
   useEffect(() => {
     Promise.resolve(

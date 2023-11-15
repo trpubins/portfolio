@@ -1,0 +1,3 @@
+{
+    "eslint.options": { "overrideConfigFile": "${workspaceRoot}/.eslintrc.json" }
+}

@@ -7,7 +7,7 @@
     "build": "next build",
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write .",
-    "lint": "eslint . --ext ts --ext tsx --ext js"
+    "lint": "next lint"
   },
   "husky": {
     "hooks": {
@@ -26,7 +26,7 @@
     "browserslist": "^4.22.1",
     "graphql": "^15.3.0",
     "intersection-observer": "^0.11.0",
-    "next": "^11.1.2",
+    "next": "^12.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-transition-group": "^4.4.1",
@@ -35,11 +35,13 @@
     "styled-components": "^5.2.0"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^14.0.2",
     "babel-eslint": "^10.1.0",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-styled-components": "^1.11.1",
     "eslint": "^7.10.0",
     "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-next": "14.0.2",
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.3.1",
