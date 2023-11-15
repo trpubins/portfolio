@@ -7,7 +7,6 @@ import { LOADER_DELAY } from '@lib/constants';
 import { useScrollDirection } from '@hooks';
 import { Menu } from '@components';
 import { IconLogo } from '@components/Icons';
-// import * as gtag from '@lib/gtag';
 import { StyledHeader, StyledNav, StyledLinks } from './styles';
 
 const Nav = ({ isHome }) => {
@@ -35,17 +34,6 @@ const Nav = ({ isHome }) => {
   const timeout = isHome ? LOADER_DELAY : 0;
   const fadeClass = isHome ? 'fade' : '';
   const fadeDownClass = isHome ? 'fadedown' : '';
-
-  //   const handleClickResume = () => {
-  //     if (IS_PRODUCTION) {
-  //       gtag.event({
-  //         action: 'click_resume',
-  //         category: 'resume',
-  //         label: 'user clicked on resume button',
-  //       });
-  //     }
-  //     window.open('/resume.pdf', '_blank');
-  //   };
 
   return (
     <StyledHeader scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
