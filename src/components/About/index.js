@@ -1,7 +1,6 @@
-/* eslint-disable global-require */
+/* eslint-disable @next/next/no-img-element */
 import { useEffect, useRef } from 'react';
 import { NumberedHeading } from '@common/styles';
-import Image from 'next/image';
 import { skills } from '@config';
 import { srConfig } from '@config/sr';
 import { StyledAboutSection, StyledText, StyledPic } from './styles';
@@ -44,7 +43,7 @@ const About = () => {
 
         <StyledPic>
           <div className="wrapper">
-            <Image width={300} height={300} blu src="/avatar.jpeg" alt="Avatar" className="img" />
+            <img src="/avatar.jpeg" alt="Avatar" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="img" />
           </div>
         </StyledPic>
       </div>

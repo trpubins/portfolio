@@ -4,10 +4,6 @@
 const nextConfig = {
   output: 'export',     // indicates that this is a static SPA export
 
-  images: {
-    unoptimized: true   // disable the Image Optimization API for static SPA export
-  },
-
   // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
   // trailingSlash: true,
 

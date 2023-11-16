@@ -1,9 +1,8 @@
-/* eslint-disable global-require */
+/* eslint-disable @next/next/no-img-element */
 import { useEffect, useRef } from 'react';
 import { Icon } from '@components/Icons';
 import { socialMedia } from '@config';
 import { srConfig } from '@config/sr';
-import Image from 'next/image';
 import { StyledFooter, StyledSocialLinks, StyledMadeWith, StyledCredit } from './styles';
 
 const Footer = () => {
@@ -32,7 +31,7 @@ const Footer = () => {
       <StyledMadeWith>
         <p>Made with</p>
         <a rel="noreferrer" target="_blank" href="https://nextjs.org/">
-          <Image src="/nextjs-white-logo.svg" width={100} height={100} />
+          <img src="/nextjs-white-logo.svg" alt="nextjs" loading="lazy" width="100" height="100" decoding="async" data-nimg="1" />
         </a>
       </StyledMadeWith>
 
