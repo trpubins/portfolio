@@ -2,10 +2,10 @@
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-  output: 'export',
+  output: 'export',     // indicates that this is a static SPA export
 
   images: {
-    unoptimized: true  // disable the Image Optimization API for static SPA export
+    unoptimized: true   // disable the Image Optimization API for static SPA export
   },
 
   // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
@@ -15,7 +15,6 @@ const nextConfig = {
   // skipTrailingSlashRedirect: true,
 
   // Optional: Change the output directory `out` -> `dist`
-  distDir: 'dist',
 };
 
 module.exports = nextConfig;
