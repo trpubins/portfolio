@@ -6,7 +6,7 @@ module.exports = [
     github: 'https://github.com/topshelfsoftware/real-estate-community-ranking-backend',
     external: 'https://www.movingtophoenix.net/55-communities-ranking-tool',
     descriptionHtml:
-      'API-based software solution to rank 55+ communities in the Phoenix metro area based on a homebuyer&apos;s priorities. Takes needs/wants and contact info as input and returns a personalized list of the highest ranked communities.',
+      'API-based software solution to rank 55+ communities in the Phoenix metro area based on a homebuyer&apos;s priorities. Takes needs/wants as input and returns a personalized list of the highest ranked communities.',
     techs: ['Python', 'JavaScript', 'AWS'],
   },
   {
