@@ -11,12 +11,11 @@ module.exports = [
   },
   {
     title: 'Pokémon Shiny Hunting',
-    cover: '/proj02.jpeg',
-    github: 'https://github.com/my-user/proj02',
-    external: 'https://proj02.my-domain.com',
+    cover: '/proj02.svg',
+    github: 'https://github.com/trpubins/pokemon-shiny-hunting',
     descriptionHtml:
-      'Here we provide an executive summary of Project #2. <a target="_blank" rel="noreferrer" href="https://proj02.my-domain.com">Check it out</a> ',
-    techs: ['TechStack01', 'TechStack02', 'TechStack03'],
+      'Cross-platform application to automate the arduous shiny hunting process. Performs image recognition by leveraging basic functions of OpenCV. Runs on both macOS and Windows.',
+    techs: ['Python', 'OpenCV', 'ASGI'],
   },
   {
     title: 'Gifter App',
