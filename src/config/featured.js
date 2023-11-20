@@ -19,11 +19,10 @@ module.exports = [
   },
   {
     title: 'Gifter App',
-    cover: '/proj03.jpeg',
-    github: 'https://github.com/my-user/proj03',
-    external: 'https://proj03.my-domain.com',
+    cover: '/proj03.svg',
+    github: 'https://github.com/trpubins/Gifter',
     descriptionHtml:
-      'Here we provide an executive summary of Project #3. <a target="_blank" rel="noreferrer" href="https://proj03.my-domain.com">Check it out</a> ',
-    techs: ['TechStack01', 'TechStack02', 'TechStack03'],
+      'Native iOS application that matches gifters in a secret santa gift exchange. Notifies each participant separately to keep gifter assignments a surprise.',
+    techs: ['Swift', 'SwiftUI'],
   },
 ];
