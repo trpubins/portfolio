@@ -1,30 +1,28 @@
 /* eslint-disable max-len */
 module.exports = [
   {
-    title: 'Project #1',
-    cover: '/proj01.jpeg',
-    github: 'https://github.com/my-user/proj01',
-    external: 'https://proj01.my-domain.com',
+    title: 'Community Ranking Tool',
+    cover: '/proj01.svg',
+    github: 'https://github.com/topshelfsoftware/real-estate-community-ranking-backend',
+    external: 'https://www.movingtophoenix.net/55-communities-ranking-tool',
     descriptionHtml:
-      'Here we provide an executive summary of Project #1. <a target="_blank" rel="noreferrer" href="https://proj01.my-domain.com">Check it out</a> ',
-    techs: ['TechStack01', 'TechStack02', 'TechStack03'],
+      'API-based web app to rank 55+ communities in the Phoenix metro area based on a homebuyer&apos;s priorities. Takes needs/wants as input and returns a personalized list of the highest ranked communities.',
+    techs: ['Python', 'JavaScript', 'AWS'],
   },
   {
-    title: 'Project #2',
-    cover: '/proj02.jpeg',
-    github: 'https://github.com/my-user/proj02',
-    external: 'https://proj02.my-domain.com',
+    title: 'Pokémon Shiny Hunting',
+    cover: '/proj02.svg',
+    github: 'https://github.com/trpubins/pokemon-shiny-hunting',
     descriptionHtml:
-      'Here we provide an executive summary of Project #2. <a target="_blank" rel="noreferrer" href="https://proj02.my-domain.com">Check it out</a> ',
-    techs: ['TechStack01', 'TechStack02', 'TechStack03'],
+      'Cross-platform desktop application to automate the arduous shiny hunting process. Performs image recognition by leveraging basic functions of OpenCV. Runs on both macOS and Windows.',
+    techs: ['Python', 'OpenCV', 'ASGI'],
   },
   {
-    title: 'Project #3',
-    cover: '/proj03.jpeg',
-    github: 'https://github.com/my-user/proj03',
-    external: 'https://proj03.my-domain.com',
+    title: 'Gifter App',
+    cover: '/proj03.svg',
+    github: 'https://github.com/trpubins/Gifter',
     descriptionHtml:
-      'Here we provide an executive summary of Project #3. <a target="_blank" rel="noreferrer" href="https://proj03.my-domain.com">Check it out</a> ',
-    techs: ['TechStack01', 'TechStack02', 'TechStack03'],
+      'Native iOS app that matches gifters in a secret santa gift exchange. Notifies each participant separately to keep gifter assignments a surprise.',
+    techs: ['Swift', 'SwiftUI'],
   },
 ];

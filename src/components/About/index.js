@@ -1,7 +1,6 @@
-/* eslint-disable global-require */
+/* eslint-disable @next/next/no-img-element */
 import { useEffect, useRef } from 'react';
 import { NumberedHeading } from '@common/styles';
-import Image from 'next/image';
 import { skills } from '@config';
 import { srConfig } from '@config/sr';
 import { StyledAboutSection, StyledText, StyledPic } from './styles';
@@ -21,14 +20,20 @@ const About = () => {
       <div className="inner">
         <StyledText>
           <div>
-            <p>Hello! I&apos;m First, a Software Developer based in City, State.</p>
             <p>
-              I enjoy creating beautiful and reliable applications for internet and phones.
-              <br />
-              My goal is to always build scalable products and performant experiences.
+              My name is Tanner, and I&apos;m based in Phoenix, Arizona. &nbsp;
+              <span role="img" aria-label="desert">
+                🏜️
+              </span>
             </p>
             <br />
-            <p>Here are a few technologies I&apos;ve been working with recently:</p>
+            <p>
+              I design, develop and deploy software systems that are highly available, scalable and
+              secure. My objective is always to architect loosely coupled software so that it can
+              rapidly evolve as clients&apos; needs change.
+            </p>
+            <br />
+            <p>Here are a few technologies I&apos;m proficient in:</p>
           </div>
 
           <ul className="skills-list">
@@ -38,7 +43,7 @@ const About = () => {
 
         <StyledPic>
           <div className="wrapper">
-            <Image width={300} height={300} blu src="/avatar.jpeg" alt="Avatar" className="img" />
+            <img src="/avatar.jpeg" alt="Avatar" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="img" />
           </div>
         </StyledPic>
       </div>

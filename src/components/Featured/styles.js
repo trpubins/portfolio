@@ -146,6 +146,8 @@ export const StyledProject = styled.div`
   }
 
   .project-title {
+    position: relative;
+    z-index: 10;
     color: ${({ theme }) => theme.text.default};
     font-size: clamp(24px, 5vw, 28px);
 

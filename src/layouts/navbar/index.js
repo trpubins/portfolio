@@ -7,7 +7,6 @@ import { LOADER_DELAY } from '@lib/constants';
 import { useScrollDirection } from '@hooks';
 import { Menu } from '@components';
 import { IconLogo } from '@components/Icons';
-// import * as gtag from '@lib/gtag';
 import { StyledHeader, StyledNav, StyledLinks } from './styles';
 
 const Nav = ({ isHome }) => {
@@ -36,17 +35,6 @@ const Nav = ({ isHome }) => {
   const fadeClass = isHome ? 'fade' : '';
   const fadeDownClass = isHome ? 'fadedown' : '';
 
-  //   const handleClickResume = () => {
-  //     if (IS_PRODUCTION) {
-  //       gtag.event({
-  //         action: 'click_resume',
-  //         category: 'resume',
-  //         label: 'user clicked on resume button',
-  //       });
-  //     }
-  //     window.open('/resume.pdf', '_blank');
-  //   };
-
   return (
     <StyledHeader scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
       <StyledNav>
@@ -55,9 +43,9 @@ const Nav = ({ isHome }) => {
             <CSSTransition classNames={fadeClass} timeout={timeout}>
               <div className="logo" tabIndex="-1">
                 {isHome ? (
-                  <a href="/" aria-label="home">
+                  <Link href="/" aria-label="home">
                     <IconLogo width={50} height={50} />
-                  </a>
+                  </Link>
                 ) : (
                   <Link href="/" aria-label="home">
                     <IconLogo />

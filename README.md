@@ -34,7 +34,7 @@ You can start editing the page by modifying `src/pages/index.js`. The page auto-
     npm run build
     ```
 
-Site files can be found in the `dist` folder after the build completes.
+Site files can be found in the `out` folder after the build completes.
 
 ## 📚 Learn More
 

@@ -7,7 +7,6 @@ import { Icon } from '@components/Icons';
 import { projects } from '@config';
 import { srConfig } from '@config/sr';
 import { PROJECTS_GRID_LIMIT, IS_PRODUCTION } from '@lib/constants';
-import * as gtag from '@lib/gtag';
 import { StyledProject, StyledProjectsSection } from './styles';
 
 const Projects = () => {
@@ -28,9 +27,6 @@ const Projects = () => {
   }, []);
 
   const handleClickProject = (link) => {
-    if (IS_PRODUCTION) {
-      gtag.event('click_project', 'projects', 'user clicked on project link button', link);
-    }
     window.open(link, '_blank');
   };
 
