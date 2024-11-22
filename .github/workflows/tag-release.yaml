@@ -24,4 +24,4 @@ jobs:
           -H "Accept: application/vnd.github+json" \
           -H "Authorization: token ${{ secrets.PORTFOLIO_DEPLOY_PAT }}" \
           https://api.github.com/repos/trpubins/portfolio-deploy/dispatches \
-          -d '{"event_type":"triggered_by_trpubins/portfolio"}'
+          -d '{"event_type":"triggered_by_repo_portfolio"}'
