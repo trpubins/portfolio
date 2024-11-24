@@ -4,37 +4,38 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## 🏁 Getting Started
 
-1. Install and use the correct version of Node using [nvm](https://github.com/nvm-sh/nvm)
+### Prerequisites
 
-    ```bash
-    nvm install
-    ```
+1. Node.js installed on system OR [nvm](https://github.com/nvm-sh/nvm) with initialization script located here: `$(HOME)/.nvm/nvm.sh`
 
-2. Install dependencies
+### Set Up Environment
 
-    ```bash
-    npm install
-    ```
+To create the dev environment, navigate to the project root directory and run the following
 
-3. Run the development server
+```bash
+make setup
+```
 
-    ```bash
-    npm run dev
-    ```
+>NOTE: This command installs the correct version of Node (if `nvm` is present)
+and installs required dependencies as well as other developer tools.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To launch the development server and enable hot reloads, run
+
+```bash
+make dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with a browser to view the rendered result.
 
 You can start editing the page by modifying `src/pages/index.js`. The page auto-updates as you edit the file.
 
 ## 🛠️ Building for Production
 
-1. Build the static site
+Site files can be found in the `out` folder after the build completes. Build the static site with
 
-    ```bash
-    npm run build
-    ```
-
-Site files can be found in the `out` folder after the build completes.
+```bash
+make build
+```
 
 ## 📚 Learn More
 
