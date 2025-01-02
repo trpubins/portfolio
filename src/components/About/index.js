@@ -43,7 +43,7 @@ const About = () => {
 
         <StyledPic>
           <div className="wrapper">
-            <img src="/avatar.jpeg" alt="Avatar" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" className="img" />
+            <img src="/images/avatar.jpeg" alt="Avatar" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" className="img" />
           </div>
         </StyledPic>
       </div>
