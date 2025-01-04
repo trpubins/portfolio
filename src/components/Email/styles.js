@@ -10,7 +10,7 @@ export const StyledLinkWrapper = styled.div`
     margin: 20px auto;
     padding: 10px;
     font-family: ${(props) => props.theme.fontFamily.mono};
-    font-size: ${(props) => props.theme.fontSize.xs};
+    font-size: ${(props) => props.theme.fontSize.sm};
     letter-spacing: 0.1em;
     writing-mode: vertical-rl;
     transition: ${(props) => props.theme.transitions.default};
