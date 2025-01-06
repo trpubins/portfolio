@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "prepare": "husky install",
+    "test": "jest --coverage",
+    "test:silent": "SILENCE_LOGS=true jest --coverage",
     "dev": "next dev",
     "build": "next build",
     "type-check": "tsc --pretty --noEmit",
