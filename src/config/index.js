@@ -1,22 +1,16 @@
 /* eslint-disable max-len */
+import { email, skills, socialMedia } from './about';
 import featuredProjects from './featured';
 import projects from './projects';
+import { work } from './work';
 
 module.exports = {
-  email: 'tannerp@topshelfsoftware.com',
+  email: email,
+  skills: skills,
+  socialMedia: socialMedia,
   featuredProjects,
   projects,
-  skills: ['Python', 'Docker', 'React', 'JavaScript', 'Lambda/EC2', 'API Gateway', 'ECS/Fargate', 'DynamoDB', ],
-  socialMedia: [
-    {
-      name: 'GitHub',
-      url: 'https://github.com/trpubins',
-    },
-    {
-      name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/tpubins/',
-    },
-  ],
+  work,
   navLinks: [
     {
       name: 'About',
