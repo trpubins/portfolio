@@ -24,7 +24,7 @@ export const MainContainer = styled.main`
   }
 
   &.fillHeight {
-    padding: 0 200px;
+    padding: 0 100px;
 
     @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
       padding: 0 100px;

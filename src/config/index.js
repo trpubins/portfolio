@@ -6,7 +6,7 @@ module.exports = {
   email: 'tannerp@topshelfsoftware.com',
   featuredProjects,
   projects,
-  skills: ['Python', 'JavaScript', 'React', 'AWS Lambda', 'DynamoDB', 'API Gateway'],
+  skills: ['Python', 'Docker', 'React', 'JavaScript', 'Lambda/EC2', 'API Gateway', 'ECS/Fargate', 'DynamoDB', ],
   socialMedia: [
     {
       name: 'GitHub',
