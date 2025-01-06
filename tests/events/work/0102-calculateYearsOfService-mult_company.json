@@ -1,0 +1,74 @@
+{
+  "description": "Should calculate years of service correctly for all companies",
+  "input": {
+    "workData": [
+      {
+        "roles": [
+          "R1",
+          "R2"
+        ],
+        "companyName": "C1",
+        "companyUrl": "https://www.c1.com",
+        "startDate": "Feb 2022",
+        "endDate": null
+      },
+      {
+        "roles": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "companyName": "C2",
+        "companyUrl": "https://www.c2.com",
+        "startDate": "Jan 2017",
+        "endDate": "Feb 2022"
+      },
+      {
+        "roles": [
+          "R1"
+        ],
+        "companyName": "C3",
+        "companyUrl": "https://www.c3.com",
+        "startDate": "May 2016",
+        "endDate": "Aug 2016"
+      }
+    ]
+  },
+  "expectedOutput": [
+    {
+      "roles": [
+        "R1",
+        "R2"
+      ],
+      "companyName": "C1",
+      "companyUrl": "https://www.c1.com",
+      "startDate": "Feb 2022",
+      "endDate": null,
+      "yearsSvc": 2.9
+    },
+    {
+      "roles": [
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "companyName": "C2",
+      "companyUrl": "https://www.c2.com",
+      "startDate": "Jan 2017",
+      "endDate": "Feb 2022",
+      "yearsSvc": 5.1
+    },
+    {
+      "roles": [
+        "R1"
+      ],
+      "companyName": "C3",
+      "companyUrl": "https://www.c3.com",
+      "startDate": "May 2016",
+      "endDate": "Aug 2016",
+      "yearsSvc": 0.3
+    }
+  ]
+}
