@@ -30,6 +30,26 @@ const workData = [
   },
 ];
 
+/**
+ * Calculates the years of service for a given work item based on start and end dates.
+ *
+ * This function takes a work item object with `startDate` and optional `endDate` properties.
+ * The `startDate` and `endDate` are parsed into `Date` objects (using `parseMonthYear`),
+ * and the difference in years is calculated. If `endDate` is not provided, the current date is used.
+ * The result is rounded to one decimal place.
+ *
+ * @param {Object} workItem - The work item object containing start and end dates.
+ * @param {string} workItem.startDate - The start date of the work item in "Month Year" format (e.g., "Jan 2020").
+ * @param {string} [workItem.endDate] - The end date of the work item in "Month Year" format. If not provided, the current date is used.
+ * @returns {number} The total years of service rounded to one decimal place.
+ *
+ * @example
+ * const workItem = { startDate: "Jan 2020", endDate: "Jun 2022" };
+ * calculateYearsOfService(workItem); // Returns 2.5
+ *
+ * const ongoingWorkItem = { startDate: "Jan 2020" };
+ * calculateYearsOfService(ongoingWorkItem); // Returns the number of years from Jan 2020 to the current date.
+ */
 function calculateYearsOfService(workItem) {
   const startDate = new Date(parseMonthYear(workItem.startDate));
   const endDate = workItem.endDate ? new Date(parseMonthYear(workItem.endDate)) : new Date();
