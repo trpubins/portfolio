@@ -1,6 +1,7 @@
 /* eslint-disable no-return-assign */
 /* eslint-disable global-require */
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import VideoModal from '@components/Common/VideoModal';
 import { Icon } from '@components/Icons';
 import { NumberedHeading } from '@common/styles';
 import { featuredProjects } from '@config';
@@ -15,6 +16,15 @@ import {
 const Featured = () => {
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);
+  const [activeProject, setActiveProject] = useState(null);
+
+  const handleModalOpen = (project) => {
+    setActiveProject(project);
+  };
+
+  const handleModalClose = () => {
+    setActiveProject(null);
+  };
 
   useEffect(() => {
     const ScrollReveal = require('scrollreveal');
@@ -30,7 +40,7 @@ const Featured = () => {
       <div>
         {featuredProjects &&
           featuredProjects.map((project, i) => {
-            const { title, external, techs, github, cover, descriptionHtml } = project;
+            const { title, cover, demo, github, external, descriptionHtml, techs } = project;
             return (
               <StyledProject key={title} ref={(el) => (revealProjects.current[i] = el)}>
                 <div className="project-content">
@@ -65,6 +75,11 @@ const Featured = () => {
                         <Icon name="External" />
                       </a>
                     )}
+                    {demo && (
+                      <button onClick={() => handleModalOpen(project)} className="hover" aria-label="Watch Video">
+                        <Icon name="PlayDemo" />
+                      </button>
+                    )}
                   </StyledProjectLinks>
                 </div>
 
@@ -80,6 +95,14 @@ const Featured = () => {
             );
           })}
       </div>
+
+      {activeProject && (
+        <VideoModal
+          isOpen={!!activeProject}
+          onClose={handleModalClose}
+          srcMp4={activeProject.demo}
+        />
+      )}
     </section>
   );
 };
