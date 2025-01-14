@@ -3,6 +3,7 @@ module.exports = [
   {
     title: 'Community Ranking Tool',
     cover: '/images/proj01.svg',
+    demo: '/video/proj01_demo.mp4',
     github: 'https://github.com/topshelfsoftware/real-estate-community-ranking-backend',
     external: 'https://www.movingtophoenix.net/55-communities-ranking-tool',
     descriptionHtml:
