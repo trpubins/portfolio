@@ -21,6 +21,7 @@ module.exports = [
   {
     title: 'Gifter App',
     cover: '/images/proj03.svg',
+    demo: '/video/proj03_demo.mp4',
     github: 'https://github.com/trpubins/Gifter',
     descriptionHtml:
       'Native iOS app that matches gifters in a secret santa gift exchange. Notifies each participant separately to keep gifter assignments a surprise.',
