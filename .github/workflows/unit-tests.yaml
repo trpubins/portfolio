@@ -1,0 +1,41 @@
+name: Unit Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  unit-test-nodejs:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-ver: ['18.x']
+    
+    steps:
+      - name: Check out repo  # for deps, source code and unit tests
+        uses: actions/checkout@v4
+
+      - name: Install Node.js ${{ matrix.node-ver }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-ver }}
+
+      - name: Setup dev environment
+        run: make setup
+
+      - name: Lint code with ESLint
+        run: make lint
+
+      - name: Run unit tests with jest
+        run: make test
+      
+      - name: Store the coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: ./coverage/lcov.info

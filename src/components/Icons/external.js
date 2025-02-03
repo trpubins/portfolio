@@ -1,6 +1,6 @@
 const IconExternal = () => (
   <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 194.818 194.818">
-    <title>External</title>
+    <title>Open App</title>
     <g>
       <path
         d="M185.818,2.161h-57.04c-4.971,0-9,4.029-9,9s4.029,9,9,9h35.312l-86.3,86.3c-3.515,3.515-3.515,9.213,0,12.728

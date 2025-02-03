@@ -1,5 +1,5 @@
 .PHONY: setup clean lint \
-		dev build
+		test dev build
 
 ####### CONSTANTS #######
 PROJ_ROOT_DIR := $(abspath $(dir $(lastword $(MAKEFILE_LIST))))
@@ -29,6 +29,10 @@ clean:
 
 lint:
 	@$(MAKE) setup && npm run lint
+
+test:
+	$(NVM_SETUP) && \
+		npm run test:silent
 
 dev:
 	@$(MAKE) setup && npm run dev

@@ -31,7 +31,7 @@ const Footer = () => {
       <StyledMadeWith>
         <p>Made with</p>
         <a rel="noreferrer" target="_blank" href="https://nextjs.org/">
-          <img src="/nextjs-white-logo.svg" alt="nextjs" loading="lazy" width="100" height="100" decoding="async" data-nimg="1" />
+          <img src="/images/nextjs-white-logo.svg" alt="nextjs" loading="lazy" width="100" height="100" decoding="async" data-nimg="1" />
         </a>
       </StyledMadeWith>
 

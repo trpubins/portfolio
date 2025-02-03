@@ -1,0 +1,22 @@
+{
+  "description": "Should calculate years of service correctly for one company",
+  "input": {
+      "workData": [
+          {
+              "roles": ["Test Role"],
+              "companyName": "Test Company",
+              "startDate": "Jan 2020",
+              "endDate": "Jan 2022"
+          }
+      ]
+  },
+  "expectedOutput": [
+      {
+          "roles": ["Test Role"],
+          "companyName": "Test Company",
+          "startDate": "Jan 2020",
+          "endDate": "Jan 2022",
+          "yearsSvc": 2.0
+      }
+  ]
+}

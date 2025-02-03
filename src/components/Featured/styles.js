@@ -31,13 +31,19 @@ export const StyledProjectImgWrapper = styled.div`
     opacity: 0.25;
   }
 
-  a {
+  a,
+  button {
     display: block;
     width: 100%;
     background-color: ${(props) => props.theme.brand.primary};
     border-radius: ${(props) => props.theme.borderRadius};
     vertical-align: middle;
     background: transparent;
+  }
+  
+  button {
+    background-color: transparent;
+    cursor: pointer;
   }
 `;
 
@@ -48,13 +54,32 @@ export const StyledProjectLinks = styled.div`
   margin-top: 10px;
   margin-left: -10px;
   color: ${({ theme }) => theme.text.accent};
-  a {
+
+  a,
+  button {
     padding: 10px;
+    transition: ${(props) => props.theme.transitions.default};
+    transform: translateY(0);
+    
     svg {
       fill: ${({ theme }) => theme.text.accent};
       width: 20px;
       height: 20px;
+      transition: fill ${(props) => props.theme.transitions.default};
     }
+    
+    &:hover,
+    &:focus {
+      svg {
+        fill: ${(props) => props.theme.brand.primary};
+      }
+      transform: translateY(-3px);
+    }
+  }
+    
+  button {
+    background-color: transparent;
+    cursor: pointer;
   }
 `;
 
