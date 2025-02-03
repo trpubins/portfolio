@@ -13,6 +13,7 @@ module.exports = [
   {
     title: 'Pokémon Shiny Hunting',
     cover: '/images/proj02.svg',
+    demo: '/video/proj02_demo.mp4',
     github: 'https://github.com/trpubins/pokemon-shiny-hunting',
     descriptionHtml:
       'Cross-platform desktop application to automate the arduous shiny hunting process. Performs image recognition by leveraging basic functions of OpenCV. Runs on both macOS and Windows.',
