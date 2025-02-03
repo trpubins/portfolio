@@ -31,13 +31,19 @@ export const StyledProjectImgWrapper = styled.div`
     opacity: 0.25;
   }
 
-  a {
+  a,
+  button {
     display: block;
     width: 100%;
     background-color: ${(props) => props.theme.brand.primary};
     border-radius: ${(props) => props.theme.borderRadius};
     vertical-align: middle;
     background: transparent;
+  }
+  
+  button {
+    background-color: transparent;
+    cursor: pointer;
   }
 `;
 

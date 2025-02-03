@@ -76,7 +76,7 @@ const Featured = () => {
                       </a>
                     )}
                     {demo && (
-                      <button onClick={() => handleModalOpen(project)} className="hover" aria-label="Watch Video">
+                      <button onClick={() => handleModalOpen(project)} className="hover" aria-label="Watch Demo">
                         <Icon name="PlayDemo" />
                       </button>
                     )}
@@ -84,12 +84,12 @@ const Featured = () => {
                 </div>
 
                 <StyledProjectImgWrapper>
-                  <a href={external || github || '#'} target="_blank" rel="noopener noreferrer">
+                  <button onClick={() => handleModalOpen(project)} className="hover" aria-label="Watch Demo">
                     <div className="img-wrapper">
                       <div className="img-cont" />
                       <StyledProjectImage src={cover} alt={title} className="img" />
                     </div>
-                  </a>
+                  </button>
                 </StyledProjectImgWrapper>
               </StyledProject>
             );
