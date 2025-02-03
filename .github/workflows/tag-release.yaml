@@ -6,16 +6,11 @@ on:
       - main
 
 jobs:
-  auto-tag:
-    uses: topshelfsoftware/.github/.github/workflows/repo-auto-tag.yaml@main
-  
-  auto-release:
-    needs: auto-tag
-    
-    uses: topshelfsoftware/.github/.github/workflows/repo-create-release.yaml@main
+  tag-and-release:
+    uses: topshelfsoftware/.github/.github/workflows/repo-tag-and-release.yaml@main
 
   deploy-dispatch:
-    needs: auto-tag
+    needs: tag-and-release
     runs-on: ubuntu-latest
     steps:
       - name: Dispatch trpubins/portfolio-deploy
