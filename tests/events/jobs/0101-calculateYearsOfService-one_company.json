@@ -1,7 +1,7 @@
 {
   "description": "Should calculate years of service correctly for one company",
   "input": {
-      "workData": [
+      "jobsData": [
           {
               "roles": ["Test Role"],
               "companyName": "Test Company",

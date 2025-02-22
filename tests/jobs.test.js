@@ -1,8 +1,8 @@
-const { calculateYearsOfService } = require("../src/config/work.js");
+const { calculateYearsOfService } = require("../src/config/jobs.js");
 const fs = require("fs");
 const path = require("path");
 
-const eventsDir = path.join(__dirname, "events", "work");
+const eventsDir = path.join(__dirname, "events", "jobs");
 const testCases = fs.readdirSync(eventsDir).map((file) => {
     const filePath = path.join(eventsDir, file);
     const inputData = JSON.parse(fs.readFileSync(filePath, "utf8"));
@@ -14,10 +14,10 @@ describe("CalculateYearsOfService", () => {
         "%s",
         (fileName, { description, input, expectedOutput }) => {
             console.log(`Test Description: ${description}`);
-            const { workData } = input;
+            const { jobsData } = input;
             
-            // Calculate years of service for each work item
-            const result = workData.map(item => ({
+            // Calculate years of service for each job
+            const result = jobsData.map(item => ({
                 ...item,
                 yearsSvc: calculateYearsOfService(item)
             }));

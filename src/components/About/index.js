@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useRef } from 'react';
 import { NumberedHeading } from '@common/styles';
-import { skills, work } from '@config';
+import { jobs, skills } from '@config';
 import { srConfig } from '@config/sr';
 import { StyledAboutSection, StyledText, StyledPic } from './styles';
 
@@ -14,7 +14,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const totYearsExp = work.reduce((total, item) => total + item.yearsSvc, 0).toFixed(1);
+  const totYearsExp = jobs.reduce((total, item) => total + item.yearsSvc, 0).toFixed(1);
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>

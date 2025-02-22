@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import { parseMonthYear } from '../common/date';
 
-const workData = [
+const jobsData = [
   {
     roles: ['Software Engineering Manager', 'Senior Software Architect'],
     companyName: 'Pratt & Whitney',
@@ -31,28 +31,28 @@ const workData = [
 ];
 
 /**
- * Calculates the years of service for a given work item based on start and end dates.
+ * Calculates the years of service for a given job based on start and end dates.
  *
- * This function takes a work item object with `startDate` and optional `endDate` properties.
+ * This function takes a job object with `startDate` and optional `endDate` properties.
  * The `startDate` and `endDate` are parsed into `Date` objects (using `parseMonthYear`),
  * and the difference in years is calculated. If `endDate` is not provided, the current date is used.
  * The result is rounded to one decimal place.
  *
- * @param {Object} workItem - The work item object containing start and end dates.
- * @param {string} workItem.startDate - The start date of the work item in "Month Year" format (e.g., "Jan 2020").
- * @param {string} [workItem.endDate] - The end date of the work item in "Month Year" format. If not provided, the current date is used.
+ * @param {Object} job - The job object containing start and end dates.
+ * @param {string} job.startDate - The start date of the job in "Month Year" format (e.g., "Jan 2020").
+ * @param {string} [job.endDate] - The end date of the job in "Month Year" format. If not provided, the current date is used.
  * @returns {number} The total years of service rounded to one decimal place.
  *
  * @example
- * const workItem = { startDate: "Jan 2020", endDate: "Jun 2022" };
- * calculateYearsOfService(workItem); // Returns 2.5
+ * const job = { startDate: "Jan 2020", endDate: "Jun 2022" };
+ * calculateYearsOfService(job); // Returns 2.5
  *
- * const ongoingWorkItem = { startDate: "Jan 2020" };
- * calculateYearsOfService(ongoingWorkItem); // Returns the number of years from Jan 2020 to the current date.
+ * const ongoingjob = { startDate: "Jan 2020" };
+ * calculateYearsOfService(ongoingjob); // Returns the number of years from Jan 2020 to the current date.
  */
-function calculateYearsOfService(workItem) {
-  const startDate = new Date(parseMonthYear(workItem.startDate));
-  const endDate = workItem.endDate ? new Date(parseMonthYear(workItem.endDate)) : new Date();
+function calculateYearsOfService(job) {
+  const startDate = new Date(parseMonthYear(job.startDate));
+  const endDate = job.endDate ? new Date(parseMonthYear(job.endDate)) : new Date();
 
   const millisDiff = endDate - startDate;
   const yearsDiff = millisDiff / (1000 * 60 * 60 * 24 * 365.25);
@@ -60,13 +60,13 @@ function calculateYearsOfService(workItem) {
   return Number(yearsDiff.toFixed(1));
 }
 
-// add years of service to each work item
-const work = workData.map((item) => ({
+// add years of service to each job
+const jobs = jobsData.map((item) => ({
   ...item,
   yearsSvc: calculateYearsOfService(item),
 }));
 
 module.exports = {
-  work,
+  jobs: jobs,
   calculateYearsOfService,
 };
