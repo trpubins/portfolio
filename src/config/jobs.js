@@ -3,28 +3,50 @@ import { parseMonthYear } from '../common/date';
 
 const jobsData = [
   {
-    roles: ['Software Engineering Manager', 'Senior Software Architect'],
     companyName: 'Pratt & Whitney',
     companyUrl: 'https://www.prattwhitney.com',
+    roles: ['Software Engineering Manager', 'Senior Software Architect'],
+    accomplishments: [
+      'Architect, develop and maintain cloud-native apps on AWS to automate engineering evaluations for jet engine hardware',
+      'Build and deploy scalable, high-performance RESTful APIs for common microservices used across multiple internal teams',
+      'Champion a test-driven culture by advocating best practices, implementing CI/CD pipelines with GH Actions, and mentoring teams to improve code quality and accelerate deployments',
+      'Develop comprehensive user docs and training curriculum',
+      'Collaborate with cross-functional teams to develop processes for Methods CoP, fostering knowledge sharing & best practices',
+      'Migrated production app seamlessly to Enterprise cloud with zero downtime, data loss, or user impact',
+      'Invented novel solution to remove damage within a finite element model of a component; co-inventor of Patent Pending (U.S. Patent Application No. 18/632,725, filed Apr 2024)'
+    ],
     startDate: 'Feb 2022',
     endDate: null,
   },
   {
+    companyName: 'Collins Aerospace',
+    companyUrl: 'https://www.collinsaerospace.com',
     roles: [
       'Software Engineer',
       'Senior Product Support Engineer',
       'Lead Project Engineer',
       'Associate Project Engineer',
     ],
-    companyName: 'Collins Aerospace',
-    companyUrl: 'https://www.collinsaerospace.com',
+    accomplishments: [
+      'Designed and built engineering tools and hardware emulators using the desktop app framework, Electron',
+      'Developed and maintained ARINC 661 (spec.) SDKs to support customers building end-user applications for cockpit displays',
+      'Led agile ceremonies as Scrum Master, increasing team predictability and ensuring consistent value delivery',
+      'Verified software requirements to support DO-178 certification',
+      'Engaged with customers to identify root causes and deliver timely solutions',
+      'Earned a Level 1 Excellence Award for driving results on product rejections at Airbus flight assembly line'
+    ],
     startDate: 'Jan 2017',
     endDate: 'Feb 2022',
   },
   {
-    roles: ['Manufacturing Engineering Intern'],
     companyName: 'Honeywell',
     companyUrl: 'https://www.honeywell.com',
+    roles: ['Manufacturing Engineering Intern'],
+    accomplishments: [
+      'Generated cost analyses of turbine engine parts totaling $1.2M in potential savings',
+      'Interpreted complex drawings according to ASME Y14.5 standards (GD&T)',
+      'Supported value engineering efforts through supplier negotiations'
+    ],
     startDate: 'May 2016',
     endDate: 'Aug 2016',
   },
@@ -63,6 +85,7 @@ function calculateYearsOfService(job) {
 // add years of service to each job
 const jobs = jobsData.map((item) => ({
   ...item,
+  title: item.roles[0],
   yearsSvc: calculateYearsOfService(item),
 }));
 
