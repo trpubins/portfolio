@@ -18,8 +18,8 @@ const Hero = () => {
   const three = <StyledBigTitle slate>I build excellent software.</StyledBigTitle>;
   const four = (
     <p>
-      I&apos;m a software architect specializing in web + mobile application development and cloud
-      computing solutions.
+      I&apos;m an experienced software architect specializing in full-stack and serverless cloud development,
+      delivering scalable, high-performance applications.
     </p>
   );
   const five = (
