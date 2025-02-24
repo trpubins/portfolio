@@ -3,7 +3,7 @@ import mixins from '@styles/mixins';
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   borderRadius: '12px',
-  borderRadiusButton: '2.375rem',
+  borderRadiusButton: '0.75rem',
   hamburgerWidth: '3rem',
   tabHeight: '48px',
   tabWidth: '148px',
