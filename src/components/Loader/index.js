@@ -5,7 +5,7 @@ import IconLoader from '@components/Icons/IconLoader';
 import { StyledLoader } from './styles';
 
 const Loader = ({ onFinish }) => {
-  const animate = () => {
+  const animate = React.useCallback(() => {
     const loader = anime.timeline({
       complete: () => onFinish(),
     });
@@ -18,7 +18,7 @@ const Loader = ({ onFinish }) => {
       opacity: 0,
       scale: 0.1,
     });
-  };
+  }, [onFinish]);
 
   const [isMounted, setIsMounted] = useState(false);
 
@@ -26,7 +26,7 @@ const Loader = ({ onFinish }) => {
     const timeout = setTimeout(() => setIsMounted(true), 10);
     animate();
     return () => clearTimeout(timeout);
-  }, []);
+  }, [animate]);
 
   return (
     <StyledLoader className="loader" isMounted={isMounted}>
