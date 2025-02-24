@@ -73,17 +73,17 @@ const Nav = ({ isHome }) => {
             </TransitionGroup>
           </ol>
 
-          {/* <TransitionGroup component={null}>
+          <TransitionGroup component={null}>
             {isMounted && (
               <CSSTransition classNames={fadeDownClass} timeout={timeout}>
                 <div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
-                  <a onClick={handleClickResume} className="resume-button">
+                  <a className="resume-button" href="/files/resume.pdf" target="_blank" rel="noopener noreferrer">
                     Resume
                   </a>
                 </div>
               </CSSTransition>
             )}
-          </TransitionGroup> */}
+          </TransitionGroup>
         </StyledLinks>
 
         <TransitionGroup component={null}>
