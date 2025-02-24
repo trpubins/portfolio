@@ -7,7 +7,7 @@ export default {
   hamburgerWidth: '3rem',
   fontFamily: {
     fontSans: 'Open Sans, -apple-system, BlinkMacSystemFont,Segoe UI, Helvetica, Arial',
-    fontMono: 'Space Mono, SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace',
+    fontMono: 'SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace',
   },
   brand: {
     primary: '#F8845D',
@@ -23,18 +23,23 @@ export default {
     xl: '2.2rem',
     xxl: '2.6rem',
   },
-  breakpoints: {
-    xs: '320px',
-    sm: '576px',
-    md: '768px',
-    lg: '1080px',
-    xl: '1200px',
-  },
   fontw: {
     light: 300,
     regular: 400,
+    medium: 500,
     semibold: 600,
     bold: 700,
+  },
+  breakpoints: {
+    xs: '360px',      // Small phones
+    sm: '480px',      // Large phones
+    md: '640px',      // Phablets / small tablets
+    lg: '768px',      // Tablets
+    xl: '960px',      // Small laptops / large tablets
+    xxl: '1080px',    // Standard laptops
+    xxxl: '1280px',   // Desktops
+    ultra: '1536px',  // Large desktops / 2K screens
+    max: '1920px',    // 1080p+ screens
   },
   transitions: {
     easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
