@@ -5,6 +5,8 @@ export default {
   borderRadius: '12px',
   borderRadiusButton: '2.375rem',
   hamburgerWidth: '3rem',
+  tabHeight: '48px',
+  tabWidth: '148px',
   fontFamily: {
     fontSans: 'Open Sans, -apple-system, BlinkMacSystemFont,Segoe UI, Helvetica, Arial',
     fontMono: 'SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace',

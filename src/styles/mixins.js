@@ -146,11 +146,12 @@ const mixins = {
     padding: 0;
     margin: 0;
     list-style: none;
-    font-size: ${(props) => props.theme.fontSize.lg};
+    font-size: ${(props) => props.theme.fontSize.md};
     li {
       position: relative;
       padding-left: 30px;
       margin-bottom: 10px;
+      color: ${(props) => props.theme.text.accent};
       &:before {
         content: '▹';
         position: absolute;
