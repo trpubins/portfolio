@@ -16,7 +16,7 @@ module.exports = [
     demo: '/video/proj02_demo.mp4',
     github: 'https://github.com/trpubins/pokemon-shiny-hunting',
     descriptionHtml:
-      'Cross-platform desktop application to automate the arduous shiny hunting process. Performs image recognition by leveraging basic functions of OpenCV. Runs on both macOS and Windows.',
+      'Cross-platform desktop application to automate the arduous shiny hunting process. Performs image classification using computer vision techniques. Runs on both macOS and Windows.',
     techs: ['Python', 'OpenCV', 'ASGI'],
   },
   {
@@ -25,7 +25,7 @@ module.exports = [
     demo: '/video/proj03_demo.mp4',
     github: 'https://github.com/trpubins/Gifter',
     descriptionHtml:
-      'Native iOS app that matches gifters in a secret santa gift exchange. Notifies each participant separately to keep gifter assignments a surprise.',
+      'Native iOS app that matches gifters in a secret santa gift exchange. Notifies each participant separately via email to keep gifter assignments a surprise.',
     techs: ['Swift', 'SwiftUI'],
   },
 ];

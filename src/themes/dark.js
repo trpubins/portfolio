@@ -1,6 +1,6 @@
 import common from './common';
 
-const lightTheme = {
+const darkTheme = {
   ...common,
   bg: {
     default: '#161922',
@@ -9,7 +9,7 @@ const lightTheme = {
   },
   text: {
     default: '#F4F4F4',
-    reverse: '#0A1A2F',
+    reverse: '#242A38',
     accent: '#a3a8c3',
   },
   shadows: {
@@ -20,4 +20,4 @@ const lightTheme = {
   },
 };
 
-export default lightTheme;
+export default darkTheme;

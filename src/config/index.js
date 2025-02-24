@@ -1,8 +1,8 @@
 /* eslint-disable max-len */
 import { email, skills, socialMedia } from './about';
 import featuredProjects from './featured';
+import { jobs } from './jobs';
 import projects from './projects';
-import { work } from './work';
 
 module.exports = {
   email: email,
@@ -10,11 +10,15 @@ module.exports = {
   socialMedia: socialMedia,
   featuredProjects,
   projects,
-  work,
+  jobs,
   navLinks: [
     {
       name: 'About',
       url: '/#about',
+    },
+    {
+      name: 'Experience',
+      url: '/#jobs',
     },
     {
       name: 'Work',

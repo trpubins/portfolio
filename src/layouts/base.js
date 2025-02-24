@@ -26,7 +26,7 @@ const BaseLayout = ({ children }) => {
         <meta property="og:url" content="https://tannerpubins.com" />
         <meta
           name="description"
-          content="Hello, World! I am Tanner Pubins. I build excellent software. I'm a software architect specializing in web + mobile application development and cloud computing solutions."
+          content="Hello, World! I am Tanner Pubins. I build excellent software. I'm an experienced software architect specializing in full-stack and serverless cloud development, delivering scalable, high-performance applications."
         />
         <meta
           name="keywords"
