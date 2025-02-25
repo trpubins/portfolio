@@ -1,4 +1,5 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useRef } from "react";
+import { useOnClickOutside } from '@hooks';
 import {
   CloseButton,
   ModalContainer,
@@ -14,14 +15,15 @@ interface ModalProps {
   children: ReactNode;
 }
 
-
-
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
+  const modalRef = useRef<HTMLDivElement>(null);
+  useOnClickOutside(modalRef, onClose);
+
   if (!isOpen) return null;
 
   return (
     <ModalOverlay>
-      <ModalContainer>
+      <ModalContainer ref={modalRef}>
         <CloseButton onClick={onClose} aria-label="Close modal">
           &times;
         </CloseButton>

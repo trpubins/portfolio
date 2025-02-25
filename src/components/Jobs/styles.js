@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 
 export const StyledJobsSection = styled.section`
-  max-width: ${(props) => props.theme.breakpoints.lg};
+  max-width: ${(props) => props.theme.breakpoints.md};
 
   .inner {
     display: flex;
 
-    @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
       display: block;
     }
 
     // Prevent container from jumping
-    @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
-      min-height: ${(props) => props.theme.breakpoints.xs};
+    @media (min-width: ${(props) => props.theme.breakpoints.md}) {
+      min-height: ${(props) => props.theme.breakpoints.xxs};
     }
   }
 `;
@@ -25,34 +25,35 @@ export const StyledTabList = styled.div`
   margin: 0;
   list-style: none;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     display: flex;
     overflow-x: auto;
     width: calc(100% + 100px);
-    padding-left: 50px;
+    padding: 0 50px;
     margin-left: -50px;
+    margin-right: -50px;
     margin-bottom: 30px;
   }
-  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
     width: calc(100% + 50px);
-    padding-left: 25px;
-    margin-left: -25px;
+    padding: 0 25px;
+    margin: 0 -25px;
   }
 
   li {
     &:first-of-type {
-      @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+      @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
         margin-left: 50px;
       }
-      @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+      @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
         margin-left: 25px;
       }
     }
     &:last-of-type {
-      @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+      @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
         padding-right: 50px;
       }
-      @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+      @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
         padding-right: 25px;
       }
     }
@@ -74,12 +75,13 @@ export const StyledTabButton = styled.button`
   text-align: left;
   white-space: nowrap;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.lg}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     padding: 0 15px 2px;
   }
-  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     ${({ theme }) => theme.mixins.flexCenter};
     min-width: ${(props) => props.theme.tabWidth};
+    width: ${(props) => props.theme.tabWidth};
     padding: 0 15px;
     border-left: 0;
     border-bottom: 2px solid ${({ isActive, theme }) => (isActive ? theme.brand.primary : theme.bg.defaultLight)};
@@ -104,7 +106,7 @@ export const StyledHighlight = styled.div`
   transform: translateY(calc(${({ activeTabId }) => activeTabId} * ${(props) => props.theme.tabHeight}));
   transition: transform 0.25s ${(props) => props.theme.transitions.easing};
 
-  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     top: auto;
     bottom: 0;
     width: 100%;
@@ -113,7 +115,7 @@ export const StyledHighlight = styled.div`
     margin-left: 50px;
     transform: translateX(calc(${({ activeTabId }) => activeTabId} * ${(props) => props.theme.tabWidth}));
   }
-  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
     margin-left: 25px;
   }
 `;
@@ -123,7 +125,7 @@ export const StyledTabPanels = styled.div`
   width: 100%;
   margin-left: 20px;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     margin-left: 0;
   }
 `;

@@ -147,8 +147,8 @@ export const StyledSidebar = styled.aside`
 
   .resume-link {
     ${({ theme }) => theme.mixins.bigButton};
-    padding: 18px 50px;
-    margin: 10% auto 0;
+    padding: 16px 32px;
+    margin: 0 auto 20px;
     width: max-content;
   }
 `;

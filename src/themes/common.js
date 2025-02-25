@@ -3,10 +3,10 @@ import mixins from '@styles/mixins';
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   borderRadius: '12px',
-  borderRadiusButton: '2.375rem',
+  borderRadiusButton: '0.75rem',
   hamburgerWidth: '3rem',
   tabHeight: '48px',
-  tabWidth: '148px',
+  tabWidth: '152px',
   fontFamily: {
     fontSans: 'Open Sans, -apple-system, BlinkMacSystemFont,Segoe UI, Helvetica, Arial',
     fontMono: 'SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace',
@@ -33,15 +33,13 @@ export default {
     bold: 700,
   },
   breakpoints: {
-    xs: '360px',      // Small phones
-    sm: '480px',      // Large phones
-    md: '640px',      // Phablets / small tablets
-    lg: '768px',      // Tablets
-    xl: '960px',      // Small laptops / large tablets
-    xxl: '1080px',    // Standard laptops
-    xxxl: '1280px',   // Desktops
-    ultra: '1536px',  // Large desktops / 2K screens
-    max: '1920px',    // 1080p+ screens
+    xxs: '320px',
+    xs: '480px',
+    sm: '576px',
+    md: '768px',
+    lg: '1080px',
+    xl: '1200px',
+    ultra: '1920px',
   },
   transitions: {
     easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
