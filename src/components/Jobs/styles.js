@@ -12,7 +12,7 @@ export const StyledJobsSection = styled.section`
 
     // Prevent container from jumping
     @media (min-width: ${(props) => props.theme.breakpoints.md}) {
-      min-height: ${(props) => props.theme.breakpoints.xxs};
+      min-height: ${(props) => props.theme.breakpoints.xs};
     }
   }
 `;
