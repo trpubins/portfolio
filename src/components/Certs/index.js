@@ -2,17 +2,22 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { NumberedHeading } from '@common/styles';
+import ShowcaseModal from '@components/Common/ShowcaseModal';
+import { certifications } from '@config';
 import { srConfig } from '@config/sr';
-import { StyledCertsSection } from './styles';
-
-const certifications = [
-  { name: 'Solutions Architect', img: '/images/aws-sa.png' },
-  { name: 'AI Practitioner', img: '/images/aws-aip.png' },
-  { name: 'Cloud Practitioner', img: '/images/aws-cp.png' },
-];
+import { StyledBadge, StyledCertsSection } from './styles';
 
 const Certs = () => {
   const revealContainer = useRef(null);
+  const [activeBadge, setActiveBadge] = useState(null);
+
+  const handleModalOpen = (badge) => {
+    setActiveBadge(badge);
+  };
+
+  const handleModalClose = () => {
+    setActiveBadge(null);
+  };
 
   useEffect(() => {
     const ScrollReveal = require('scrollreveal');
@@ -21,45 +26,57 @@ const Certs = () => {
   }, []);
 
   return (
-    <StyledCertsSection id="certs" ref={revealContainer}>
-      <NumberedHeading>Certifications I&apos;ve Earned</NumberedHeading>
-      <div className="flex justify-center items-center min-h-screen bg-gray-900 p-10">
-        <div className="grid grid-cols-3 gap-4 place-items-center">
+    <>
+      <StyledCertsSection id="certs" ref={revealContainer}>
+        <NumberedHeading>Certifications I&apos;ve Earned</NumberedHeading>
+
+        <div className="badges">
           {certifications.map((cert, index) => (
-            <HexCard key={index} cert={cert} />
+            <Badge key={index} cert={cert} onBadgeClick={() => handleModalOpen(cert)} />
           ))}
         </div>
-      </div>
-    </StyledCertsSection>
+      </StyledCertsSection>
+
+      {activeBadge && (
+        <ShowcaseModal
+          isOpen={!!activeBadge}
+          onClose={handleModalClose}
+          imageSrc={activeBadge.img}
+          imageAlt={activeBadge.name}
+          title={activeBadge.fullName}
+          description={activeBadge.descriptionHtml}
+          tags={activeBadge.tags}
+          linkText="Verify"
+          linkUrl={activeBadge.verifyUrl}
+        />
+      )}
+    </>
   );
 };
 
-const HexCard = ({ cert }) => {
+const Badge = ({ cert, onBadgeClick }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <motion.div
-      className="relative w-32 h-36 flex items-center justify-center"
+    <StyledBadge
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
+      whileHover={{ scale: 1.2 }}
+      transition={{ duration: 0.3 }}
+      onClick={onBadgeClick}
     >
-      <img
-        src={cert.img}
-        alt={cert.name}
-        width={112}
-        height={112}
-        className="object-cover rounded-lg z-10"
-      />
+      <img src={cert.img} alt={cert.name} />
       {hovered && (
         <motion.div
-          className="absolute inset-0 bg-black bg-opacity-80 flex items-center justify-center text-white text-sm font-semibold text-center px-2 clip-hexagon"
+          className="badge-overlay"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
+          transition={{ duration: 0.2 }}
         >
-          {cert.name}
+          <span>{cert.name}</span>
         </motion.div>
       )}
-    </motion.div>
+    </StyledBadge>
   );
 };
 
