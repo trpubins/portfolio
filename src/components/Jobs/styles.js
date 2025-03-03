@@ -67,7 +67,8 @@ export const StyledTabButton = styled.button`
   width: 100%;
   height: ${(props) => props.theme.tabHeight};
   padding: 0 20px 2px;
-  border-left: 2px solid ${({ isActive, theme }) => (isActive ? theme.brand.primary : theme.bg.defaultLight)};
+  border-left: 2px solid
+    ${({ isActive, theme }) => (isActive ? theme.brand.primary : theme.bg.defaultLight)};
   background-color: transparent;
   color: ${({ isActive, theme }) => (isActive ? theme.brand.primary : theme.text.accent)};
   font-family: ${(props) => props.theme.fontFamily.fontMono};
@@ -84,7 +85,8 @@ export const StyledTabButton = styled.button`
     width: ${(props) => props.theme.tabWidth};
     padding: 0 15px;
     border-left: 0;
-    border-bottom: 2px solid ${({ isActive, theme }) => (isActive ? theme.brand.primary : theme.bg.defaultLight)};
+    border-bottom: 2px solid
+      ${({ isActive, theme }) => (isActive ? theme.brand.primary : theme.bg.defaultLight)};
     text-align: center;
   }
 
@@ -103,7 +105,9 @@ export const StyledHighlight = styled.div`
   height: ${(props) => props.theme.tabHeight};
   border-radius: ${(props) => props.theme.borderRadius};
   background: ${(props) => props.theme.brand.primary};
-  transform: translateY(calc(${({ activeTabId }) => activeTabId} * ${(props) => props.theme.tabHeight}));
+  transform: translateY(
+    calc(${({ activeTabId }) => activeTabId} * ${(props) => props.theme.tabHeight})
+  );
   transition: transform 0.25s ${(props) => props.theme.transitions.easing};
 
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
@@ -113,7 +117,9 @@ export const StyledHighlight = styled.div`
     max-width: ${(props) => props.theme.tabWidth};
     height: 2px;
     margin-left: 50px;
-    transform: translateX(calc(${({ activeTabId }) => activeTabId} * ${(props) => props.theme.tabWidth}));
+    transform: translateX(
+      calc(${({ activeTabId }) => activeTabId} * ${(props) => props.theme.tabWidth})
+    );
   }
   @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
     margin-left: 25px;
@@ -147,13 +153,27 @@ export const StyledTabPanel = styled.div`
 
     .company {
       color: ${(props) => props.theme.brand.primary};
+
+      &::before {
+        content: '@';
+        margin: 0 5px;
+      }
+
+      @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+        display: block;
+
+        &::before {
+          margin-right: 5px;
+          margin-left: 0;
+        }
+      }
     }
-    
+
     a {
       font-size: ${(props) => props.theme.fontSize.lg};
     }
   }
-  
+
   .inline-link {
     ${({ theme }) => theme.mixins.inlineLink};
   }

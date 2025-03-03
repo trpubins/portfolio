@@ -103,7 +103,6 @@ const Jobs = () => {
                   <h3>
                     <span>{job.title}</span>
                     <span className="company">
-                      &nbsp;@&nbsp;
                       <a href={job.companyUrl} target="_blank" className="inline-link">
                         {job.companyName}
                       </a>
