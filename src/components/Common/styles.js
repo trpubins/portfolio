@@ -11,7 +11,7 @@ export const ModalOverlay = styled.div`
 export const ModalContainer = styled.div`
   position: relative;
   width: 75%;
-  max-width: 1080px;
+  max-width: ${({ theme }) => theme.breakpoints.lg};
   border-radius: ${({ theme }) => theme.borderRadius};
   background-color: ${({ theme }) => theme.bg.default};
   padding: 3.5rem;
@@ -29,17 +29,76 @@ export const ModalContainer = styled.div`
 `;
 
 export const CloseButton = styled.button`
+  ${({ theme }) => theme.mixins.flexCenter};
   position: absolute;
-  top: 0rem;
-  right: 1.5rem;
-  background: none;
-  border: none;
-  color: ${({ theme }) => theme.text.accent};
-  font-size: 4rem;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  padding: 15px;
+  border: 0;
+  background-color: transparent;
+  color: inherit;
+  text-transform: none;
   cursor: pointer;
+  
+  .button-box {
+    display: inline-block;
+    position: relative;
+    width: ${(props) => props.theme.hamburgerWidth};
+    height: 24px;
+  }
 
+  .button-inner {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: ${(props) => props.theme.hamburgerWidth};
+    height: 2.5px;
+    border-radius: ${(props) => props.theme.borderRadius};
+    background-color: ${(props) => props.theme.brand.secondary};
+    transition-duration: 0.22s;
+    transition-property: transform;
+    transition-delay: 0.12s;
+    transform: rotate(225deg);
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: auto;
+      right: 0;
+      width: 100%;
+      height: 2.5px;
+      border-radius: 4px;
+      background-color: ${(props) => props.theme.brand.secondary};
+      transition-timing-function: ease;
+      transition-duration: 0.15s;
+      transition-property: transform;
+    }
+
+    &:before {
+      width: 100%;
+      top: 0;
+      opacity: 0;
+      transition: ${({ theme }) => theme.transitions.hamBeforeActive};
+    }
+
+    &:after {
+      width: 100%;
+      bottom: 0;
+      transform: rotate(-90deg);
+      transition: ${({ theme }) => theme.transitions.hamAfterActive};
+    }
+  }
+  
   &:hover {
-    color: ${({ theme }) => theme.text.default};
+    .button-inner,
+    .button-inner:before,
+    .button-inner:after {
+      background-color: ${({ theme }) => theme.bg.reverse};
+    }
   }
 `;
 

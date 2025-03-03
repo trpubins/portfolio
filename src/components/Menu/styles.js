@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledMenu = styled.div`
   display: none;
-  @media (max-width: 768px) {
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     display: block;
   }
 `;
@@ -10,7 +10,7 @@ export const StyledMenu = styled.div`
 export const StyledHamburgerButton = styled.button`
   display: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     ${({ theme }) => theme.mixins.flexCenter};
     position: relative;
     z-index: 10;
@@ -23,6 +23,7 @@ export const StyledHamburgerButton = styled.button`
     transition-timing-function: linear;
     transition-duration: 0.15s;
     transition-property: opacity, filter;
+    cursor: pointer;
   }
 
   .ham-box {
@@ -37,7 +38,7 @@ export const StyledHamburgerButton = styled.button`
     top: 50%;
     right: 0;
     width: ${(props) => props.theme.hamburgerWidth};
-    height: 2px;
+    height: 2.5px;
     border-radius: ${(props) => props.theme.borderRadius};
     background-color: ${(props) => props.theme.brand.primary};
     transition-duration: 0.22s;
@@ -55,7 +56,7 @@ export const StyledHamburgerButton = styled.button`
       left: auto;
       right: 0;
       width: ${(props) => props.theme.hamburgerWidth};
-      height: 2px;
+      height: 2.5px;
       border-radius: 4px;
       background-color: ${(props) => props.theme.brand.primary};
       transition-timing-function: ease;
@@ -82,7 +83,7 @@ export const StyledHamburgerButton = styled.button`
 export const StyledSidebar = styled.aside`
   display: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     ${({ theme }) => theme.mixins.flexCenter};
     position: fixed;
     top: 0;
