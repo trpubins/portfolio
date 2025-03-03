@@ -9,7 +9,7 @@ interface ShowcaseModalProps {
   imageSrc: string;
   imageAlt: string;
   title: string;
-  description: string;
+  descriptionHtml: string;
   tags: string[];
   linkText?: string;
   linkUrl?: string;
@@ -21,7 +21,7 @@ const ShowcaseModal: React.FC<ShowcaseModalProps> = ({
   imageSrc,
   imageAlt,
   title,
-  description,
+  descriptionHtml,
   tags,
   linkText,
   linkUrl
@@ -35,7 +35,7 @@ const ShowcaseModal: React.FC<ShowcaseModalProps> = ({
         <div className="showcase-content">
           <h2>{title}</h2>
           <div className="divider" />
-          <p>{description}</p>
+          <p dangerouslySetInnerHTML={{ __html: descriptionHtml }}/>
           <div className="tags">
             {tags.map(tag => (
               <span key={tag}>{tag}</span>

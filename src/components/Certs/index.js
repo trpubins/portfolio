@@ -44,7 +44,7 @@ const Certs = () => {
           imageSrc={activeBadge.img}
           imageAlt={activeBadge.name}
           title={activeBadge.fullName}
-          description={activeBadge.descriptionHtml}
+          descriptionHtml={activeBadge.descriptionHtml}
           tags={activeBadge.tags}
           linkText="Verify"
           linkUrl={activeBadge.verifyUrl}
