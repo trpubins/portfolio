@@ -6,6 +6,10 @@ export const LOADER_DELAY = 2000;
 export const PROJECTS_GRID_LIMIT = 6;
 export const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 export const KEY_CODES = {
+  ARROW_DOWN: 'ArrowDown',
+  ARROW_DOWN_IE11: 'Down',
+  ARROW_UP: 'ArrowUp',
+  ARROW_UP_IE11: 'Up',
   ARROW_LEFT: 'ArrowLeft',
   ARROW_LEFT_IE11: 'Left',
   ARROW_RIGHT: 'ArrowRight',

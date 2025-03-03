@@ -3,7 +3,7 @@ import { CSSTransition } from 'react-transition-group';
 import { NumberedHeading } from '@common/styles';
 import { jobs } from '@config';
 import { srConfig } from '@config/sr';
-import { KEY_CODES } from '@utils';
+import { KEY_CODES } from '@lib/constants';
 import {
   StyledJobsSection,
   StyledTabList,
