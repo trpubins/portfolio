@@ -17,7 +17,7 @@ export const ModalContainer = styled.div`
   padding: 3.5rem;
   box-shadow: ${({ theme }) => theme.shadows.large};
   overflow-y: auto;
-  max-height: 80vh;
+  max-height: 75vh;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
     width: 80%;
