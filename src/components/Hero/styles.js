@@ -4,7 +4,7 @@ export const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
   align-items: flex-start;
-  min-height: 100vh;
+  min-height: 90vh;
 
   h1 {
     margin: 0 0 8px 4px;

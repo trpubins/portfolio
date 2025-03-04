@@ -139,7 +139,7 @@ export const StyledTabPanels = styled.div`
 export const StyledTabPanel = styled.div`
   width: 100%;
   height: auto;
-  padding: 10px 5px;
+  padding: 10px 5px 0;
 
   ul {
     ${({ theme }) => theme.mixins.fancyList};
