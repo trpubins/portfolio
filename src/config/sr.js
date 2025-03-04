@@ -1,9 +1,14 @@
-module.exports = {
-  srConfig: (delay = 200, viewFactor = 0.25) => ({
+import theme from '@themes/common';
+
+const getScrollRevealConfig = () => {
+  const mdBreakpoint = parseInt(theme.breakpoints.md);
+  const isMobile = window.innerWidth < mdBreakpoint;
+
+  return {
     origin: 'bottom',
     distance: '20px',
     duration: 500,
-    delay,
+    delay: 200,
     rotate: { x: 0, y: 0, z: 0 },
     opacity: 0,
     scale: 1,
@@ -11,7 +16,14 @@ module.exports = {
     mobile: true,
     reset: false,
     useDelay: 'always',
-    viewFactor,
-    viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
-  }),
+    viewFactor: isMobile ? 0.05 : 0.25,
+    viewOffset: { top: 0, right: 0, bottom: 0, left: 0 }
+  };
+};
+
+export const srConfig = () => {
+  if (typeof window !== 'undefined') {
+    return getScrollRevealConfig();
+  }
+  return {};
 };

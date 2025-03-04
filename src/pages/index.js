@@ -7,7 +7,11 @@ const StyledMainContainer = styled.section`
   counter-reset: section;
   section {
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 80px 0;
+
+    @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+      padding: 50px 0;
+    }
   }
 `;
 
