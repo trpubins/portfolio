@@ -57,7 +57,7 @@ export const StyledPic = styled.div`
   max-width: 300px;
 
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    margin: 50px auto 0;
+    margin: 30px auto 30px;
     width: 70%;
   }
 

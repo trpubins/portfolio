@@ -14,7 +14,7 @@ NVM_SH_FP := $(HOME)/.nvm/nvm.sh
 NVM_SETUP := cd $(PROJ_ROOT_DIR) && \
 				[ -f $(NVM_SH_FP) ] && \
 				source $(NVM_SH_FP) && \
-				nvm install || true
+				(nvm use || nvm install) || true
 
 ####### BUILD TARGETS #######
 setup:

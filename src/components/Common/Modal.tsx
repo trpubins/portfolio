@@ -25,7 +25,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
     <ModalOverlay>
       <ModalContainer ref={modalRef}>
         <CloseButton onClick={onClose} aria-label="Close modal">
-          &times;
+          <div className="button-box">
+            <div className="button-inner" />
+          </div>
         </CloseButton>
         {title && <ModalTitle>{title}</ModalTitle>}
         <ModalContent>{children}</ModalContent>
