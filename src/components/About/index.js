@@ -39,8 +39,12 @@ const About = () => {
             <p>Some technologies I&apos;m proficient in:</p>
           </div>
 
-          <ul className="skills-list">
-            {skills && skills.map((skill) => <li key={skill}>{skill}</li>)}
+          <ul className="skills-list" style={{"--total-rows": Math.ceil(skills.length / 2)}}>
+            {
+              skills && skills.map((skill) => (
+                <li key={skill}>{skill}</li>
+              ))
+            }
           </ul>
         </StyledText>
 

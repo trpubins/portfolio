@@ -28,7 +28,11 @@ export const StyledText = styled.div`
     list-style: none;
 
     @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+      display: grid;
       grid-template-columns: repeat(2, minmax(140px, 200px));
+      grid-auto-flow: column;
+      grid-template-rows: repeat(var(--total-rows, 4), auto);
+      gap: 10px;
     }
 
     li {
