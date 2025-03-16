@@ -3,7 +3,9 @@ import { CSSTransition } from 'react-transition-group';
 import { NumberedHeading } from '@common/styles';
 import { jobs } from '@config';
 import { srConfig } from '@config/sr';
+import useMediaQuery from '@hooks/useMediaQuery';
 import { KEY_CODES } from '@lib/constants';
+import theme from '@themes/common';
 import {
   StyledJobsSection,
   StyledTabList,
@@ -14,16 +16,21 @@ import {
 } from './styles';
 
 const Jobs = () => {
-
   const [activeTabId, setActiveTabId] = useState(0);
   const [tabFocus, setTabFocus] = useState(null);
   const tabs = useRef([]);
   const revealContainer = useRef(null);
+  const isMobile = useMediaQuery(theme.breakpoints.sm);
 
   useEffect(() => {
     const ScrollReveal = require('scrollreveal');
     const sr = ScrollReveal.default();
     sr.reveal(revealContainer.current, srConfig());
+  }, []);
+
+  useEffect(() => {
+    const jobCount = jobs.length;
+    document.documentElement.style.setProperty('--job-count', jobCount);
   }, []);
 
   const focusTab = React.useCallback(() => {
@@ -45,7 +52,7 @@ const Jobs = () => {
   useEffect(() => focusTab(), [focusTab]);
 
   // Focus on tabs when using up & down arrow keys
-  const onKeyDown = e => {
+  const onKeyDown = (e) => {
     switch (e.key) {
       case KEY_CODES.ARROW_UP: {
         e.preventDefault();
@@ -70,20 +77,21 @@ const Jobs = () => {
       <NumberedHeading>Where I&apos;ve Worked</NumberedHeading>
 
       <div className="inner">
-        <StyledTabList role="tablist" aria-label="Job tabs" onKeyDown={e => onKeyDown(e)}>
+        <StyledTabList role="tablist" aria-label="Job tabs" onKeyDown={(e) => onKeyDown(e)}>
           {jobs &&
             jobs.map((job, i) => (
               <StyledTabButton
                 key={i}
                 isActive={activeTabId === i}
                 onClick={() => setActiveTabId(i)}
-                ref={el => (tabs.current[i] = el)}
+                ref={(el) => (tabs.current[i] = el)}
                 id={`tab-${i}`}
                 role="tab"
                 tabIndex={activeTabId === i ? '0' : '-1'}
                 aria-selected={activeTabId === i ? true : false}
-                aria-controls={`panel-${i}`}>
-                <span>{job.companyName}</span>
+                aria-controls={`panel-${i}`}
+              >
+                <span>{isMobile ? job.companyNameShort || job.companyName : job.companyName}</span>
               </StyledTabButton>
             ))}
           <StyledHighlight activeTabId={activeTabId} />
@@ -99,7 +107,8 @@ const Jobs = () => {
                   tabIndex={activeTabId === i ? '0' : '-1'}
                   aria-labelledby={`tab-${i}`}
                   aria-hidden={activeTabId !== i}
-                  hidden={activeTabId !== i}>
+                  hidden={activeTabId !== i}
+                >
                   <h3>
                     <span>{job.title}</span>
                     <span className="company">
@@ -109,7 +118,9 @@ const Jobs = () => {
                     </span>
                   </h3>
 
-                  <p className="range">{job.startDate} — {job.endDate || "Present"}</p>
+                  <p className="range">
+                    {job.startDate} — {job.endDate || 'Present'}
+                  </p>
 
                   <ul>
                     {job.accomplishments.map((accomplishment, index) => (

@@ -4,6 +4,7 @@ import { parseMonthYear } from '../common/date';
 const jobsData = [
   {
     companyName: 'Pratt & Whitney',
+    companyNameShort: 'P&W',
     companyUrl: 'https://www.prattwhitney.com',
     roles: ['Software Engineering Manager', 'Senior Software Architect'],
     accomplishments: [
@@ -20,6 +21,7 @@ const jobsData = [
   },
   {
     companyName: 'Collins Aerospace',
+    companyNameShort: 'Collins',
     companyUrl: 'https://www.collinsaerospace.com',
     roles: [
       'Software Engineer',

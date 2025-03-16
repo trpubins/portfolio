@@ -27,6 +27,7 @@ export const StyledTabList = styled.div`
 
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     display: flex;
+    gap: 0;
     overflow-x: auto;
     width: calc(100% + 100px);
     padding: 0 50px;
@@ -81,8 +82,8 @@ export const StyledTabButton = styled.button`
   }
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     ${({ theme }) => theme.mixins.flexCenter};
+    width: 100%;
     min-width: ${(props) => props.theme.tabWidth};
-    width: ${(props) => props.theme.tabWidth};
     padding: 0 15px;
     border-left: 0;
     border-bottom: 2px solid
@@ -113,15 +114,21 @@ export const StyledHighlight = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     top: auto;
     bottom: 0;
-    width: 100%;
-    max-width: ${(props) => props.theme.tabWidth};
+    width: ${props => 
+      `calc( (100% - 100px) / var(--job-count) )`
+    };  // 100px is the StyledTabList horizontal padding
     height: 2px;
     margin-left: 50px;
     transform: translateX(
-      calc(${({ activeTabId }) => activeTabId} * ${(props) => props.theme.tabWidth})
+      calc(${({ activeTabId }) => activeTabId} * 100%)
     );
   }
-  @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
+
+  @media (max-width: ${props => props.theme.breakpoints.xs}) {
+    width: ${props => 
+      `calc( (100% - 50px) / var(--job-count) )`
+    };  // 50px is the StyledTabList horizontal padding
+    min-width: ${(props) => props.theme.tabWidth};
     margin-left: 25px;
   }
 `;
