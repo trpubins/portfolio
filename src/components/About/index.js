@@ -64,28 +64,28 @@ export default About;
  * Formats a number representing years of experience into a more readable string.
  *
  * This function considers the fractional part of the input number to determine the format:
- * - If the decimal part is greater than 0.5 and less than 1, it rounds up and returns `~nextInteger`.
- * - If the decimal part is between 0 and 0.5 (inclusive), it normalizes to `currentInteger+`.
- * - For any other case, it falls back to the original number formatted to one decimal place.
+ * - If the decimal part is 0.0 to less than 0.3, it returns `currentInteger+`
+ * - If the decimal part is 0.3 to less than 0.7, it returns `currentInteger.5`
+ * - If the decimal part is 0.7 to 1.0, it returns `~nextInteger`
  *
  * @param {number} totYearsExp - The total years of experience as a number.
  * @returns {string} A formatted string representing the years of experience.
  *
  * @example
- * formatYearsExp(10.3); // Returns "10+"
- * formatYearsExp(10.6); // Returns "~11"
- * formatYearsExp(10.0); // Returns "10+"
- * formatYearsExp(11.8); // Returns "~12"
+ * formatYearsExp(10.1); // Returns "10+"
+ * formatYearsExp(10.3); // Returns "10.5"
+ * formatYearsExp(10.6); // Returns "10.5"
+ * formatYearsExp(10.8); // Returns "~11"
  */
 function formatYearsExp(totYearsExp) {
-  const intPart = Math.floor(totYearsExp); // Extract the integer part
-  const decimalPart = totYearsExp - intPart; // Get the fractional part
+  const intPart = Math.floor(totYearsExp);
+  const decimalPart = totYearsExp - intPart;
 
-  if (decimalPart > 0.5 && decimalPart < 1) {
+  if (decimalPart >= 0.7) {
     return `~${intPart + 1}`;
-  } else if (decimalPart >= 0 && decimalPart <= 0.5) {
-    return `${intPart}+`;
+  } else if (decimalPart >= 0.3) {
+    return `${intPart}.5`;
   } else {
-    return totYearsExp.toFixed(1); // Fallback to the original value
+    return `${intPart}+`;
   }
 }
