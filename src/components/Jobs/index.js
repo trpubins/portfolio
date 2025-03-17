@@ -54,13 +54,15 @@ const Jobs = () => {
   // Focus on tabs when using up & down arrow keys
   const onKeyDown = (e) => {
     switch (e.key) {
-      case KEY_CODES.ARROW_UP: {
+      case KEY_CODES.ARROW_UP:
+      case KEY_CODES.ARROW_LEFT:{
         e.preventDefault();
         setTabFocus(tabFocus - 1);
         break;
       }
 
-      case KEY_CODES.ARROW_DOWN: {
+      case KEY_CODES.ARROW_DOWN:
+      case KEY_CODES.ARROW_RIGHT: {
         e.preventDefault();
         setTabFocus(tabFocus + 1);
         break;
