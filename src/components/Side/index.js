@@ -16,7 +16,7 @@ const Side = ({ children, isHome, orientation }) => {
   }, []);
 
   return (
-    <StyledSideElement orientation={orientation}>
+    <StyledSideElement orientation={orientation} isMounted={isMounted}>
       <TransitionGroup component={null}>
         {isMounted && (
           <CSSTransition classNames={isHome ? 'fade' : ''} timeout={isHome ? LOADER_DELAY : 0}>

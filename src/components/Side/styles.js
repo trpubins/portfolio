@@ -25,5 +25,8 @@ export const StyledSideElement = styled.div`
     height: 90px;
     margin: 0 auto;
     background-color: ${(props) => props.theme.bg.reverse};
+    transition: ${(props) => props.theme.transitions.default};
+    opacity: ${(props) => (props.isMounted ? 1 : 0)};
+    visibility: ${(props) => (props.isMounted ? 'visible' : 'hidden')};
   }
 `;
