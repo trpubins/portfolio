@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledJobsSection = styled.section`
-  max-width: ${(props) => props.theme.breakpoints.md};
+  max-width: 100%;
 
   .inner {
     display: flex;
@@ -12,7 +12,7 @@ export const StyledJobsSection = styled.section`
 
     // Prevent container from jumping
     @media (min-width: ${(props) => props.theme.breakpoints.md}) {
-      min-height: ${(props) => props.theme.breakpoints.xs};
+      min-height: 500px;
     }
   }
 `;

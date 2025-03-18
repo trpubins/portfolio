@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const StyledCertsSection = styled.section`
-  max-width: ${(props) => props.theme.breakpoints.md};
+  max-width: 100%;
 
   .badges {
     display: grid;
