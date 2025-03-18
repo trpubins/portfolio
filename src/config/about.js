@@ -1,5 +1,5 @@
 const email = 'tannerp@topshelfsoftware.com';
-const skills = ['Python', 'Docker', 'React', 'JavaScript', 'Lambda/EC2', 'API Gateway', 'ECS/Fargate', 'DynamoDB', ];
+const skills = ['Python', 'JavaScript', 'API Gateway', 'DynamoDB', 'Docker', 'React', 'Lambda/EC2', 'ECS/Fargate', ];
 const socialMedia = [
   {
     name: 'GitHub',

@@ -28,7 +28,11 @@ export const StyledText = styled.div`
     list-style: none;
 
     @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+      display: grid;
       grid-template-columns: repeat(2, minmax(140px, 200px));
+      grid-auto-flow: column;
+      grid-template-rows: repeat(var(--total-rows, 4), auto);
+      gap: 10px;
     }
 
     li {
@@ -37,8 +41,8 @@ export const StyledText = styled.div`
       padding-left: 20px;
       font-family: ${(props) => props.theme.fontFamily.fontMono};
       font-size: ${(props) => props.theme.fontSize.sm};
-
       color: ${(props) => props.theme.text.accent};
+
       &:before {
         content: '▹';
         position: absolute;
@@ -67,21 +71,25 @@ export const StyledPic = styled.div`
     position: relative;
     width: 100%;
     border-radius: ${(props) => props.theme.borderRadius};
+
     &:hover,
     &:focus {
       background: transparent;
       outline: 0;
+      transform: translate(-4px, -4px);
+
       &:after {
-        top: 15px;
-        left: 15px;
+        transform: translate(8px, 8px);
       }
     }
+
     .img {
       object-fit: cover;
       max-width: 100%;
       position: relative;
       border-radius: ${(props) => props.theme.borderRadius};
     }
+
     &:before,
     &:after {
       content: '';

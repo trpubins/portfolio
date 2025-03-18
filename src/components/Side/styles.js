@@ -14,7 +14,19 @@ export const StyledSideElement = styled.div`
     right: ${(props) => (props.orientation === 'left' ? 'auto' : '20px')};
   }
 
-  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     display: none;
+  }
+  
+  &:after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0 auto;
+    background-color: ${(props) => props.theme.bg.reverse};
+    transition: ${(props) => props.theme.transitions.default};
+    opacity: ${(props) => (props.isMounted ? 1 : 0)};
+    visibility: ${(props) => (props.isMounted ? 'visible' : 'hidden')};
   }
 `;

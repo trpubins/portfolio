@@ -20,8 +20,8 @@ const IndexPage = () => (
     <Hero />
     <About />
     <Jobs />
-    <Featured />
     <Certs />
+    <Featured />
     <Contact />
   </StyledMainContainer>
 );

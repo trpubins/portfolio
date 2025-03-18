@@ -4,7 +4,6 @@ export const MainContainer = styled.main`
   display: flex;
   align-items: center;
   flex-direction: column;
-  min-height: 100vh;
   margin: 0 auto;
   width: 100%;
   max-width: 1600px;
@@ -83,7 +82,7 @@ export const StyledSocialLinks = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     display: block;
     width: 100%;
-    max-width: 270px;
+    max-width: 140px;
     margin: 0 auto 10px;
     color: ${(props) => props.theme.text.accent};
   }

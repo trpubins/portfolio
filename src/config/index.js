@@ -23,12 +23,12 @@ module.exports = {
       url: '/#jobs',
     },
     {
-      name: 'Work',
-      url: '/#projects',
-    },
-    {
       name: 'Certifications',
       url: '/#certs',
+    },
+    {
+      name: 'Projects',
+      url: '/#projects',
     },
     {
       name: 'Contact',
