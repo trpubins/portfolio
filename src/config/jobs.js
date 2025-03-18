@@ -34,7 +34,7 @@ const jobsData = [
       'Developed and maintained ARINC 661 (spec.) SDKs to support customers building end-user applications for cockpit displays',
       'Led agile ceremonies as Scrum Master, increasing team predictability and ensuring consistent value delivery',
       'Verified software requirements to support DO-178 certification',
-      'Deployed applications by packaging installers, encrypting source code and configuring license managers',
+      'Deployed cross-platform applications by packaging installers, encrypting source code and configuring license managers',
       'Earned a Level 1 Excellence Award for driving results on product rejections at Airbus flight assembly line'
     ],
     startDate: 'Jan 2017',
