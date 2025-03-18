@@ -11,7 +11,8 @@ export const StyledLinkWrapper = styled.div`
     padding: 10px;
     font-family: ${(props) => props.theme.fontFamily.mono};
     font-size: ${(props) => props.theme.fontSize.sm};
-    letter-spacing: 0.1em;
+    font-weight: ${(props) => props.theme.fontw.light};
+    letter-spacing: 0.3em;
     writing-mode: vertical-rl;
     transition: ${(props) => props.theme.transitions.default};
     &:hover,
