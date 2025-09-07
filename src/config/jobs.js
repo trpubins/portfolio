@@ -6,13 +6,13 @@ const jobsData = [
     companyName: 'Pratt & Whitney',
     companyNameShort: 'P&W',
     companyUrl: 'https://www.prattwhitney.com',
-    roles: ['Software Engineering Manager', 'Senior Software Architect'],
+    roles: ['Senior Software Engineering Manager', 'Senior Software Architect'],
     accomplishments: [
       'Architect, develop and maintain cloud-native apps on AWS to automate engineering evaluations for jet engine hardware',
       'Build and deploy scalable, high-performance RESTful APIs for common microservices used across multiple internal teams',
+      'Drive technical and non-technical decisions as Product Owner to shape the product roadmap and deliver impactful solutions',
       'Champion a test-driven culture by advocating best practices, implementing CI/CD pipelines with GH Actions, and mentoring teams to improve code quality and accelerate deployments',
       'Develop comprehensive user docs and training curriculum',
-      'Collaborate with cross-functional teams to develop processes for Methods CoP, fostering knowledge sharing & best practices',
       'Migrated production app seamlessly to Enterprise cloud with zero downtime, data loss, or user impact',
       'Invented novel solution to remove damage within a finite element model of a component; co-inventor of Patent Pending (U.S. Patent Application No. 18/632,725, filed Apr 2024)'
     ],
