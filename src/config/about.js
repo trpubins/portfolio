@@ -11,7 +11,7 @@ const socialMedia = [
   },
 ];
 
-module.exports = {
+export {
   email,
   skills,
   socialMedia,

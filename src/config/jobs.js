@@ -14,7 +14,7 @@ const jobsData = [
       'Champion a test-driven culture by advocating best practices, implementing CI/CD pipelines with GH Actions, and mentoring teams to improve code quality and accelerate deployments',
       'Develop comprehensive user docs and training curriculum',
       'Migrated production app seamlessly to Enterprise cloud with zero downtime, data loss, or user impact',
-      'Invented novel solution to remove damage within a finite element model of a component; co-inventor of Patent Pending (U.S. Patent Application No. 18/632,725, filed Apr 2024)'
+      'Invented novel solution to remove damage within a finite element model of a component; co-inventor of Patent Pending (U.S. Patent Application No. 18/632,725, filed Apr 2024)',
     ],
     startDate: 'Feb 2022',
     endDate: null,
@@ -35,7 +35,7 @@ const jobsData = [
       'Led agile ceremonies as Scrum Master, increasing team predictability and ensuring consistent value delivery',
       'Verified software requirements to support DO-178 certification',
       'Deployed cross-platform applications by packaging installers, encrypting source code and configuring license managers',
-      'Earned a Level 1 Excellence Award for driving results on product rejections at Airbus flight assembly line'
+      'Earned a Level 1 Excellence Award for driving results on product rejections at Airbus flight assembly line',
     ],
     startDate: 'Jan 2017',
     endDate: 'Feb 2022',
@@ -47,7 +47,7 @@ const jobsData = [
     accomplishments: [
       'Generated cost analyses of turbine engine parts totaling $1.2M in potential savings',
       'Interpreted complex drawings according to ASME Y14.5 standards (GD&T)',
-      'Supported value engineering efforts through supplier negotiations'
+      'Supported value engineering efforts through supplier negotiations',
     ],
     startDate: 'May 2016',
     endDate: 'Aug 2016',
@@ -91,7 +91,4 @@ const jobs = jobsData.map((item) => ({
   yearsSvc: calculateYearsOfService(item),
 }));
 
-module.exports = {
-  jobs: jobs,
-  calculateYearsOfService,
-};
+export { jobs, calculateYearsOfService };

@@ -28,7 +28,9 @@ clean:
 	rm -rf $(BUILD_DIR)
 
 lint:
-	@$(MAKE) setup && npm run lint
+	@$(MAKE) setup && \
+	$(NVM_SETUP) && \
+		npm run lint
 
 test:
 	$(NVM_SETUP) && \
@@ -38,4 +40,6 @@ dev:
 	@$(MAKE) setup && npm run dev
 
 build: clean
-	@$(MAKE) setup && npm run build
+	@$(MAKE) setup && \
+	$(NVM_SETUP) && \
+		npm run build
