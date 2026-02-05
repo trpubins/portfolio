@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import { parseMonthYear } from '../common/date';
 
 const jobsData = [

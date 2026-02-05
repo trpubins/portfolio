@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import { email, skills, socialMedia } from './about';
 import certifications from './certs';
 import featuredProjects from './featured';
