@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 module.exports = [
   {
     title: 'Other Project #1',

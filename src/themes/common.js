@@ -1,6 +1,5 @@
 import mixins from '@styles/mixins';
 
-// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   borderRadius: '12px',
   borderRadiusButton: '0.75rem',
