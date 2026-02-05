@@ -23,7 +23,7 @@ const jobsData = [
     companyNameShort: 'Collins',
     companyUrl: 'https://www.collinsaerospace.com',
     roles: [
-      'Software Engineer',
+      'Fullstack Software Engineer',
       'Senior Product Support Engineer',
       'Lead Project Engineer',
       'Associate Project Engineer',
