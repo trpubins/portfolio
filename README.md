@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 | | |
 | --- | --- |
-| Build | [![Build Status](https://github.com/trpubins/portfolio/actions/workflows/build.yaml/badge.svg)](https://github.com/trpubins/portfolio/actions/workflows/build.yaml) ![Software Version](https://img.shields.io/badge/latest-v1.4.6-blue) ![Node Versions](https://img.shields.io/badge/node-20-blue?logo=nodedotjs) |
+| Build | [![Build Status](https://github.com/trpubins/portfolio/actions/workflows/build.yaml/badge.svg)](https://github.com/trpubins/portfolio/actions/workflows/build.yaml) ![Software Version](https://img.shields.io/badge/latest-v1.4.7-blue) ![Node Versions](https://img.shields.io/badge/node-20-blue?logo=nodedotjs) |
 
 ## 🏁 Getting Started
 
